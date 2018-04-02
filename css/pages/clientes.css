@@ -1,0 +1,13 @@
+@import url('../styles.css');
+
+#header.page-clientes {
+	background-image: url("../../images/background-clientes.jpg");
+}
+
+b {
+	color: #207b20;
+}
+
+main section.section {
+	background-color: #f3f0e7;
+}

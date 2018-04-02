@@ -1,0 +1,17 @@
+* {
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+body {
+	margin: 0; /*Lado de FORA*/
+	padding: 0; /*Lado de DENTRO*/
+	font-size: 14px;
+}
+
+p {
+	margin: 10px 0 10px 0;
+}

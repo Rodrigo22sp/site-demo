@@ -1,0 +1,36 @@
+h2 {
+	text-transform: uppercase;
+	font-weight: normal;
+	text-align: center;
+	font-size: 25px;
+	margin: 10px 0 20px 0;
+}
+
+h2:after {
+	content: '';
+	display: block;
+	background-color: rgb(130, 130, 130);
+	margin: 3px auto 0 auto;
+	width: 57px;
+	height: 2px;
+}
+
+/*
+h2:before {
+	content: 'antes';
+	display: block;
+}
+
+h2:after {
+	content: 'depois';
+	display: block;
+}
+*/
+
+.subtitle {
+	margin-bottom: 80px;
+}
+
+.text-left {
+	text-align: left;
+}

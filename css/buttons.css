@@ -1,0 +1,33 @@
+.btn {
+	background-color: rgb(84, 209, 84);
+	color: #ffffff;
+	display: inline-block;
+	border-radius: 30px;
+	padding: 10px 20px;
+	text-decoration: none;
+	transition: ease .5s all;
+	border: none;
+	cursor: pointer;
+}
+
+.btn:hover {
+	background-color: rgb(84, 180, 84);
+}
+
+/*.btn.orange {
+	background-color: #FE2E64;
+}
+
+.btn.orange:hover {
+	background-color: #642EFE;
+
+}*/
+
+.btn.orange {
+	background-color: #54d154;
+}
+
+.btn.orange:hover {
+	background-color: #0A2A0A;
+
+}

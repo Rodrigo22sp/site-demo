@@ -1,0 +1,57 @@
+@import url('../styles.css');
+
+#header.page-equipe {
+	background-image: url("../../images/background-equipe.jpg");
+}
+
+#nossa-equipe {
+	background-color: #f3f0e7;
+}
+
+#nossa-equipe .img-box-round {
+	width: 120px;
+	height: 120px;
+	border: 2px solid rgb(84, 209, 84); 
+}
+
+#nossa-equipe .img-box-label:before {
+	display: none;
+
+}
+
+#nossa-equipe .row:first-child {
+	margin-bottom: 40px;
+}
+
+.nossa-equipe-member .description {
+		background-color: rgba(0, 0, 0, 0.7);
+		border: 4px solid rgba(0, 0, 0, 0.3);
+		color: white;
+		padding: 20px;
+		margin-bottom: 30px;
+	}
+
+@media (min-width: 992px) {
+
+	.nossa-equipe-member {
+		position: relative;
+	}
+
+	.nossa-equipe-member:hover .description {
+		display: block;
+	}
+
+	.nossa-equipe-member .description {
+		display: none;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		z-index: 99;
+		width: 400px;
+	}
+
+	.nossa-equipe-member:nth-child(4) .description, .nossa-equipe-member:nth-child(5) .description {
+		left: auto;
+		right: 50%;
+	}
+}

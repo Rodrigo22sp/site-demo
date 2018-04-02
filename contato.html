@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Contato - Blog e Produtos</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="css/pages/contato.min.css" rel="stylesheet" type="text/css">
+	<link href="css/form.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<header id="header" class="page-contato">
+		<div class="container">
+			<!-- ROW = Linha e é class, pois sera usado mais de uma vez -->
+			<div class="row">
+				<!-- COL = Coluna, é class pois sera usado mais de uma vez. -->
+				<div class="col col-desktop-3 col-6">
+					<a href="index.html"><img src="images/logo.png" Alt="Logo da Blog e Produtos"></a>
+				</div>
+				<div class="col col-desktop-9 col-6">
+					<nav><!-- NAV = NAVEGAR(menu) -->
+						<ul>
+							<li><a href="index.html">Home</a><!-- Encapsulei --></li>
+							<li><a href="quem-somos.html">Quem Somos</a></li>
+							<li><a href="clientes.html">Clientes</a></li>
+							<li><a href="equipe.html">Equipe</a></li>
+							<li><a href="contato.html" class="active">Contato</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<div class="row">
+				<dir class="col col-desktop-12 title">
+					<h1 id="teste">Quer conhecer melhor o nosso produto?</h1>
+				</dir>
+			</div>
+		</div>
+	</header>
+	<main><!-- Parte Principal -->
+		<section class="section section-center">
+			<h2>Contato</h2>
+			<p>Quer conhecer melhor o nosso produto? Existem muitas variações disponíveis de passagens de Lorem Ipsum.<br> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+			<div class="container">
+				<!-- https://github.com/dwyl/html-form-send-email-via-google-script-without-server  -->
+				<form action="https://script.google.com/macros/s/AKfycbxQYqvlqXHOH54c98SXWxVKOjeW_CQPdv_BO0DjbJo-0vjPTKg/exec" class="row" method="post">
+					<div class="col col-desktop-6 col-6">
+						<div class="input-control">
+							<input id="nome" type="text" name="nome" required placeholder="Nome...">
+							<label for="nome">Nome*</label>
+						</div>
+						<div class="input-control">
+							<input id="email" type="email" name="email" required placeholder="E-mail...">
+							<label for="email">E-mail*</label>
+						</div>
+						<div class="input-control">
+							<input id="telefone" type="number" name="telefone" placeholder="Telefone...">
+							<label for="telefone">Telefone</label>
+
+						</div>
+					</div>
+					<div class="col col-desktop-6 col-6">
+						<div class="input-control">
+							<textarea name="mensagem" id="mensagem" cols="30" rows="10" placeholder="Mensagem..."></textarea>
+							<label for="mensagem">Mensagem</label>
+						</div>
+					</div>
+					<input type="submit" value="Enviar" class="btn orange">
+				</form>
+			</div>
+		</section>
+	</main>
+	<footer id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col col-offser-desktop-1 col-desktop-3">
+					<p><a href="index.html"><img src="images/logo.png" alt="Logo Empresa"></a></p>
+					<p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos.</p>
+				</div>
+				<div class="col col-offser-desktop-1 col-desktop-3 col-2">
+					<h3>Menu</h3>
+					<nav>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="quem-somos.html">Quem Somos</a></li>
+							<li><a href="clientes.html">Clientes</a></li>
+							<li><a href="equipe.html">Equipe</a></li>
+							<li><a href="contato.html">Contato</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="col col-desktop-4 social col-4">
+					<a href=""><img src="images/social-facebook.png" alt="Facebook"></a>
+					<a href=""><img src="images/social-twitter.png" alt="Twitter"></a>
+					<a href=""><img src="images/social-youtube.png" alt="Youtube"></a>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<div id="copyright">
+		<p>&copy; 2017-2018 Blog e Produtos SA. Todos os direitos reservados          Rua Fictícia, 15 - 20º andar conjunto 2024, Pinheiros, São Paulo, SP. +55 11 9999.9999</p>
+	</div>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+		$('form').submit(function (event){
+			event.preventDefault();
+			$('form input[type="submit"]').val('Aguarde...')
+				.attr('disable', true);
+			$.ajax({
+				type: $('form').attr('method'),
+				url: $('form').attr('action'),
+				data: $('form').serialize(),
+				success: function () {
+					alert('Email enviado com Sucesso');
+					$('form').trigger('reset');
+
+					$('form input[type="submit"]').val('Enviar').attr('disable', false);
+				}
+			});
+		});
+	</script>
+</body>
+</html>
